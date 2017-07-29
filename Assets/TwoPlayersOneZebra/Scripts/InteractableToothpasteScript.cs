@@ -11,8 +11,8 @@ public class InteractableToothpasteScript : VRTK_InteractableObject
 
     void Start()
     {
-        Debug.Log("REPARENTING THE CAP");
-        toothpasteCap.transform.SetParent(this.transform.parent,true); //Re-parent this puppy, it'll be fine
+        //Debug.Log("REPARENTING THE CAP");
+        //toothpasteCap.transform.SetParent(this.transform.parent,false); //Re-parent this puppy, it'll be fine
     }
 
     public void OnCapGrabbed()

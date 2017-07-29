@@ -12,13 +12,13 @@ public class CustomToothpasteCapGrabAttach : VRTK_FixedJointGrabAttach {
         // Tell the toothpaste script that the cap is off and its free to be used!
         toothpasteScript.OnCapGrabbed();
 
-        // Also make our rigidbody non-kinematic...
-        this.GetComponent<Rigidbody>().isKinematic = false;
-
         // And nuke our follow script.
         Destroy(this.GetComponent<VRTK_TransformFollow>());
 
-        // Now also do all the normal stuff.
+		// Also make our rigidbody non-kinematic...
+		this.gameObject.AddComponent<Rigidbody> ();
+
+		// Now also do all the normal stuff.
         return base.StartGrab(grabbingObject, givenGrabbedObject, givenControllerAttachPoint);
     }
 }
