@@ -6,6 +6,8 @@ using VRTK;
 public class InteractableToothpasteScript : VRTK_InteractableObject
 {
     public Transform toothpasteCap;
+	public ParticleSystem toothpasteParticles;
+
     //private bool hasFired;
     //private bool hasBeenTouched;
 
@@ -22,16 +24,22 @@ public class InteractableToothpasteScript : VRTK_InteractableObject
 
     public override void StartUsing(VRTK_InteractUse usingObject)
     {
-        Debug.Log("START USING");
         base.StartUsing(usingObject);
         SqueezeToothpaste();
     }
-
+	public override void StopUsing(VRTK_InteractUse usingObject)
+	{
+		base.StopUsing(usingObject);
+		StopSqueezeToothpaste();
+	}
     private void SqueezeToothpaste()
     {
-        Debug.Log("SQUEEZED SOME GODDAMN TOOTHPASTE");
+		toothpasteParticles.Play ();
     }
-
+	private void StopSqueezeToothpaste()
+	{
+		toothpasteParticles.Stop ();
+	}
     /*
     public void OnSecondaryGrab()
     {
