@@ -5,10 +5,34 @@ using VRTK;
 
 public class InteractableToothpasteScript : VRTK_InteractableObject
 {
-    public VRTK_InteractableObject toothpasteCap;
-    private bool hasFired;
-    private bool hasBeenTouched;
+    public Transform toothpasteCap;
+    //private bool hasFired;
+    //private bool hasBeenTouched;
 
+    void Start()
+    {
+        Debug.Log("REPARENTING THE CAP");
+        toothpasteCap.transform.SetParent(this.transform.parent,true); //Re-parent this puppy, it'll be fine
+    }
+
+    public void OnCapGrabbed()
+    {
+        this.isUsable = true;
+    }
+
+    public override void StartUsing(VRTK_InteractUse usingObject)
+    {
+        Debug.Log("START USING");
+        base.StartUsing(usingObject);
+        SqueezeToothpaste();
+    }
+
+    private void SqueezeToothpaste()
+    {
+        Debug.Log("SQUEEZED SOME GODDAMN TOOTHPASTE");
+    }
+
+    /*
     public void OnSecondaryGrab()
     {
         Debug.Log("TOOTHPASTE GOT TOUCHED");
@@ -24,4 +48,5 @@ public class InteractableToothpasteScript : VRTK_InteractableObject
             hasFired = true;
         }
     }
+    */
 }

@@ -4,7 +4,7 @@ using VRTK.SecondaryControllerGrabActions;
 
 public class CustomToothpasteGrabAction : VRTK_SwapControllerGrabAction
 {
-    public InteractableToothpasteScript toothpasteScript;
+    //public InteractableToothpasteScript toothpasteScript;
 
     protected override void Awake()
     {
@@ -12,12 +12,13 @@ public class CustomToothpasteGrabAction : VRTK_SwapControllerGrabAction
         //isSwappable = false; // Because second hand grab means TOOTHPASTE
     }
 
+    /*
     public override void ProcessUpdate()
     {
         Debug.Log("BEING PROCESS UPDATED");
         toothpasteScript.OnSecondaryGrab();
     }
-
+    */
     /*
     public override void Initialise(VRTK_InteractableObject currentGrabbdObject, VRTK_InteractGrab currentPrimaryGrabbingObject, VRTK_InteractGrab currentSecondaryGrabbingObject, Transform primaryGrabPoint, Transform secondaryGrabPoint)
     {
