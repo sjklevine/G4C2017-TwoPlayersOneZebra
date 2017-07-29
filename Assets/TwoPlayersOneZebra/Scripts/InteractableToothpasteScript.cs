@@ -6,20 +6,22 @@ using VRTK;
 public class InteractableToothpasteScript : VRTK_InteractableObject
 {
     public VRTK_InteractableObject toothpasteCap;
+    private bool hasFired;
+    private bool hasBeenTouched;
 
-    public override bool PerformSecondaryAction()
+    public void OnSecondaryGrab()
     {
-        if (base.PerformSecondaryAction())
-        {
+        Debug.Log("TOOTHPASTE GOT TOUCHED");
+        hasBeenTouched = true;
+    }
+
+    protected override void Update() 
+    {
+        if (!hasFired && hasBeenTouched) { 
             Debug.Log("I'M GETTING GRABBED BY HAND 2");
             Debug.Log("GRABBING OBJECT = " + GetGrabbingObject().name);
             Debug.Log("2nd GRABBING OBJECT = " + GetSecondaryGrabbingObject().name);
-            return true;
-        }
-        else
-        {
-            return false;
+            hasFired = true;
         }
     }
-
 }
