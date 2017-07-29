@@ -9,7 +9,7 @@ public class CustomToothpasteGrabAction : VRTK_SwapControllerGrabAction
     protected override void Awake()
     {
         base.Awake();
-        isSwappable = false; // Because second hand grab means TOOTHPASTE
+        //isSwappable = false; // Because second hand grab means TOOTHPASTE
     }
 
     public override void ProcessUpdate()
