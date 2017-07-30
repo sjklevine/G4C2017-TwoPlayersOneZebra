@@ -6,7 +6,7 @@ public class BrushingTeeth : MonoBehaviour {
 	public ParticleSystem foam;
 
 	void OnTriggerEnter(Collider other) {
-		if (other.gameObject.tag.Equals ("Teeth")) {
+		if (other.gameObject.tag.Equals ("Teeth") && ToothbrushZoneScript.toothPasteApplied == true) {
 			Debug.Log ("brush brush brush");
 			if (foam != null) {
 				foam.Play ();

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ToothbrushZoneScript : MonoBehaviour {
 
-	public bool toothPasteApplied = false;
+	public static bool toothPasteApplied = false;
 	public GameObject teethDirty;
 	public GameObject teethLessDirty;
 	public GameObject teethClean;
@@ -13,6 +13,7 @@ public class ToothbrushZoneScript : MonoBehaviour {
 	private bool teethAreSparklingClean;
 	private float elapsedTime;
 	public float brushingTimeLeft = 5f;
+	public GameObject toothpasteBlob;
 
 	void Start(){
 		teethDirty.SetActive (true);
@@ -42,8 +43,8 @@ public class ToothbrushZoneScript : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other) {
-		//if (other.gameObject.tag == "Toothbrush" && toothPasteApplied == true) {
-		if (other.gameObject.tag == "Toothbrush") {
+		if (other.gameObject.tag == "Toothbrush" && toothPasteApplied == true) {
+		//if (other.gameObject.tag == "Toothbrush") {
 				
 				if(!teethAreSparklingClean){
 					Debug.Log ("begin to clean teeth");
@@ -55,8 +56,8 @@ public class ToothbrushZoneScript : MonoBehaviour {
 	}
 
 	void OnTriggerStay(Collider other){
-		//if (other.gameObject.tag == "Toothbrush" && toothPasteApplied == true) {		
-		if (other.gameObject.tag == "Toothbrush") {
+		if (other.gameObject.tag == "Toothbrush" && toothPasteApplied == true) {		
+		//if (other.gameObject.tag == "Toothbrush") {
 				
 			
 			if (!teethAreSparklingClean) {
@@ -77,6 +78,8 @@ public class ToothbrushZoneScript : MonoBehaviour {
 			}
 			if(teethAreSparklingClean){
 				brushingTimeLeft = 5f;
+				toothpasteBlob.SendMessage ("HideToothpasteGlob");
+				toothPasteApplied = false;
 			}
 		
 		}
@@ -93,8 +96,9 @@ public class ToothbrushZoneScript : MonoBehaviour {
 			teethLessDirty.SetActive (false);
 			teethClean.SetActive (true);
 			teethAreSparklingClean = true;
+			
+		//Need sparkling SFX here
 
-		//Need to hide the toothpaste on the toothbrush nad then set toothPasteApplied to false
 
 		}
 	}
