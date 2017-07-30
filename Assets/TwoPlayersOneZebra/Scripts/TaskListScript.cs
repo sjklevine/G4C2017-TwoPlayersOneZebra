@@ -19,17 +19,17 @@ public class TaskListScript : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            this.CompleteTask();
+            this.CompleteTask(tasksComplete);
         }
     }
 
-	public void CompleteTask()
+	public void CompleteTask(int whichTask)
     {
         // Play the audio cue!
         cachedAudioSource.Play();
 
         // Update the task list!
-        switch (tasksComplete)
+        switch (whichTask)
         {
             case 0:
                 task1.text = "<s>" + task1.text + "</s>";
@@ -43,6 +43,8 @@ public class TaskListScript : MonoBehaviour {
         }
 
         // Count the completion!
-        this.tasksComplete++;
+        if (whichTask == tasksComplete) { 
+            this.tasksComplete++;
+        }
     }
 }
