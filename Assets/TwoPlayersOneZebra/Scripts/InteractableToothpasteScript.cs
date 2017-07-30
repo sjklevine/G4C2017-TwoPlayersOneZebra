@@ -6,7 +6,7 @@ using VRTK;
 public class InteractableToothpasteScript : VRTK_InteractableObject
 {
     public VRTK_InteractableObject toothpasteCap;
-	public ParticleSystem toothpasteParticles;
+    public ParticleSystem toothpasteParticles;
     private PhotonView photonView;
 
     void Start()
@@ -22,25 +22,15 @@ public class InteractableToothpasteScript : VRTK_InteractableObject
     public override void StartUsing(VRTK_InteractUse usingObject)
     {
         base.StartUsing(usingObject);
-        SqueezeToothpaste();
+        this.photonView.RPC("NetworkedSqueezeTube", PhotonTargets.AllViaServer, true);
     }
-	public override void StopUsing(VRTK_InteractUse usingObject)
-	{
-		base.StopUsing(usingObject);
-		StopSqueezeToothpaste();
-	}
+    public override void StopUsing(VRTK_InteractUse usingObject)
+    {
+        base.StopUsing(usingObject);
+        this.photonView.RPC("NetworkedSqueezeTube", PhotonTargets.AllViaServer, false);
+    }
 
     // ----- Privates ! ----- //
-
-    // "Use" methods for tube
-    private void SqueezeToothpaste()
-    {
-		toothpasteParticles.Play ();
-    }
-	private void StopSqueezeToothpaste()
-	{
-		toothpasteParticles.Stop ();
-	}
 
     // "Grab/ungrab" callbacks for tube and cap
     private void HandleGrabToothpaste(object sender, InteractableObjectEventArgs e)
@@ -57,7 +47,7 @@ public class InteractableToothpasteScript : VRTK_InteractableObject
 
     private void HandleGrabCap(object sender, InteractableObjectEventArgs e)
     {
-        this.photonView.RPC("NetworkCapGrabbed", PhotonTargets.AllViaServer);
+        this.photonView.RPC("NetworkedCapGrabbed", PhotonTargets.AllViaServer);
     }
 
     [PunRPC]
@@ -80,5 +70,18 @@ public class InteractableToothpasteScript : VRTK_InteractableObject
 
         // Also make the cap rigidbody non-kinematic...
         toothpasteCap.gameObject.AddComponent<Rigidbody>();
+    }
+
+    [PunRPC]
+    void NetworkedSqueezeTube(bool newState)
+    {
+        if (newState)
+        {
+            toothpasteParticles.Play();
+        }
+        else
+        {
+            toothpasteParticles.Stop();
+        }
     }
 }
