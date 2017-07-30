@@ -3381,6 +3381,7 @@ MonoBehaviour:
   brushingNow: 0
   brushingTimeLeft: 5
   toothpasteBlob: {fileID: 0}
+  taskList: {fileID: 0}
 --- !u!114 &114359785504396256
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3545,6 +3546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftHand: {fileID: 1647167761276460}
   rightHand: {fileID: 1311027533318458}
+  head: {fileID: 1316983645817718}
 --- !u!114 &114958375509177494
 MonoBehaviour:
   m_ObjectHideFlags: 1
