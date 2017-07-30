@@ -86,12 +86,15 @@ GameObject:
   - component: {fileID: 4978506808633638}
   - component: {fileID: 33608601804291278}
   - component: {fileID: 23577997760701250}
+  - component: {fileID: 64284771516735310}
   - component: {fileID: 54029986110040022}
   - component: {fileID: 114598710186954796}
   - component: {fileID: 114149723682624224}
   - component: {fileID: 114708234066903488}
-  - component: {fileID: 64284771516735310}
   - component: {fileID: 114428175376437982}
+  - component: {fileID: 114327168914910276}
+  - component: {fileID: 114564412608679462}
+  - component: {fileID: 114387274908590470}
   m_Layer: 0
   m_Name: Glass
   m_TagString: Untagged
@@ -360,6 +363,51 @@ MonoBehaviour:
   onGrabCollisionDelay: 0
   destroyImmediatelyOnThrow: 1
   breakForce: 1500
+--- !u!114 &114327168914910276
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1798563625863180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 3
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 114564412608679462}
+  - {fileID: 114387274908590470}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 0
+  instantiationId: -1
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
+--- !u!114 &114387274908590470
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1798563625863180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af018577f438cf542b899ec9138bf9e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onChangeOnly: 0
+  position: 2
+  rotation: 2
+  scale: 0
+  velocity: 1
+  angularVelocity: 1
+  useLocalValues: 1
 --- !u!114 &114428175376437982
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -371,6 +419,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f261a3df10aea644957f68a50c448a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114564412608679462
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1798563625863180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f2581cbf5437cd44903d1d4b83020e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onChangeOnly: 0
+  ownAdditionalPhotonviews: []
 --- !u!114 &114598710186954796
 MonoBehaviour:
   m_ObjectHideFlags: 1

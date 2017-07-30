@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4800068906234262}
   - component: {fileID: 33530167734749894}
   - component: {fileID: 23345279057803850}
-  - component: {fileID: 54763001155945838}
   - component: {fileID: 65097351216374132}
+  - component: {fileID: 54763001155945838}
   - component: {fileID: 114468196378236800}
   - component: {fileID: 114759598489893280}
   - component: {fileID: 114535814143683484}
@@ -639,8 +639,8 @@ MonoBehaviour:
   - {fileID: 114341080221326848}
   - {fileID: 114142148544232432}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 1
-  instantiationId: 1
+  viewIdField: 0
+  instantiationId: -1
   currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!114 &114655491966772748
