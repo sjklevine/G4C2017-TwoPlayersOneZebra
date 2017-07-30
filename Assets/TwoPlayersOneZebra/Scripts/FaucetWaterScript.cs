@@ -7,7 +7,7 @@ public class FaucetWaterScript : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag.Equals("Toothbrush"))
+        if (other.gameObject.tag.Equals("Teeth"))
         {
             Debug.Log("TOOTHBRUSH IN WATER");
 			wetToothbrushParticles.Play ();

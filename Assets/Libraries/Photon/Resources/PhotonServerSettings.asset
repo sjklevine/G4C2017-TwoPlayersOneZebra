@@ -44,4 +44,5 @@ MonoBehaviour:
   - UpdateCapGrabbable
   - NetworkedCapGrabbed
   - UpdateTaskList
+  - NetworkedSqueezeTube
   DisableAutoOpenWizard: 1
