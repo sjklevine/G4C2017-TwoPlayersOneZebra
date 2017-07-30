@@ -5,7 +5,7 @@ using VRTK;
 
 public class ZebraAnimationSequence : MonoBehaviour
 {
-    public bool startImmediately;
+    public bool useLongSequence;
 
     public Transform bedStartPositionTransform;
     public Transform mirrorStartPositionTransform;
@@ -13,10 +13,12 @@ public class ZebraAnimationSequence : MonoBehaviour
     public VRTK_HeadsetFade fadeScript;
 
     private Transform thingToTeleport;
+    private PhotonView photonView;
 
     void Start()
     {
 		StartCoroutine (WaitUntilHavePlayArea ());
+        photonView = this.GetComponent<PhotonView>();
     }
 
     void Update()
@@ -24,11 +26,7 @@ public class ZebraAnimationSequence : MonoBehaviour
         // Dev key commands...
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            StartCoroutine(DoIntroSequence());
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            StartCoroutine(DoJumpToMirror());
+            photonView.RPC("StartNetworkedIntroSequence", PhotonTargets.AllViaServer);
         }
     }
 
@@ -38,9 +36,8 @@ public class ZebraAnimationSequence : MonoBehaviour
 			thingToTeleport = VRTK.VRTK_DeviceFinder.PlayAreaTransform();
 			yield return new WaitForSeconds (0.1f);
 		}
-		if (startImmediately) {
-			StartCoroutine(DoIntroSequence());
-		}
+
+        // TODO: Enable start button?  Or just pray that we have the reference by then?
 	}
 
     IEnumerator DoIntroSequence()
@@ -86,10 +83,22 @@ public class ZebraAnimationSequence : MonoBehaviour
         fadeScript.Unfade(unfadeTime);
     }
 
+    // TODO - Implement this
     IEnumerator DoOutroSequence()
     {
         yield return new WaitForSeconds(1.0f);
     }
 
-
+    [PunRPC]
+    void StartNetworkedIntroSequence()
+    {
+        // Start the coroutine for both players!
+        if (this.useLongSequence)
+        {
+            StartCoroutine(DoIntroSequence());
+        }
+        else {
+            StartCoroutine(DoJumpToMirror());
+        }
+    }
 }

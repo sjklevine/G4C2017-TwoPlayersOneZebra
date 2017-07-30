@@ -40,4 +40,5 @@ MonoBehaviour:
   - RequestForPickupItems
   - RequestForPickupTimes
   - SetPanoramaFromObject
+  - StartNetworkedIntroSequence
   DisableAutoOpenWizard: 1
