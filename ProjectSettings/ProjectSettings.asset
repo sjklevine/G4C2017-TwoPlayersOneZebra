@@ -10,8 +10,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: Unity NYC
-  productName: VR Desktop Bootcamp
+  companyName: G4C VR Brain Jam
+  productName: Two Players, One Zebra
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13333334, g: 0.17254902, b: 0.21176471, a: 1}
@@ -139,7 +139,7 @@ PlayerSettings:
   applicationIdentifier:
     '': com.oculus.UnitySample
     Android: com.unity3d.vrstandardassets
-    Standalone: unity.Unity.VRSamples
+    Standalone: com.6p1g.2p1z
     Tizen: com.unity3d.vrstandardassets
     iOS: com.unity3d.vrstandardassets
     tvOS: com.unity3d.vrstandardassets
@@ -234,7 +234,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 8de506d4489bff74488535c40e1f6f59, type: 3}
+      m_Icon: {fileID: 2800000, guid: 90173f9e9e795f74ca97ccc52fe410cd, type: 3}
       m_Width: 128
       m_Height: 128
   m_BuildTargetBatching:

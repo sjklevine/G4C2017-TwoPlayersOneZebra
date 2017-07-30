@@ -7,6 +7,7 @@ public class SceneChangerWithFade : MonoBehaviour
 {
 	public float fadeSpeed = 1.0f;
 	public float unfadeSpeed = 1.0f;
+    public float unfadeDelay = 0f;
 	public Color fadeColor = Color.white;
     public bool allowKeyboard = false;
 
@@ -33,6 +34,7 @@ public class SceneChangerWithFade : MonoBehaviour
 
 		// Start at the fade color, then unfade.
 		fadeReference.Fade(fadeColor, 0f);
+        yield return new WaitForSeconds(unfadeDelay);
 		fadeReference.Unfade(unfadeSpeed);
 	}
 
