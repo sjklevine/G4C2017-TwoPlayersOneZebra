@@ -41,4 +41,7 @@ MonoBehaviour:
   - RequestForPickupTimes
   - SetPanoramaFromObject
   - StartNetworkedIntroSequence
+  - UpdateCapGrabbable
+  - NetworkedCapGrabbed
+  - UpdateTaskList
   DisableAutoOpenWizard: 1

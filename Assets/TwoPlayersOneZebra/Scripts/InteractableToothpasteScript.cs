@@ -57,8 +57,20 @@ public class InteractableToothpasteScript : VRTK_InteractableObject
 
     private void HandleGrabCap(object sender, InteractableObjectEventArgs e)
     {
+        this.photonView.RPC("NetworkCapGrabbed", PhotonTargets.AllViaServer);
+    }
+
+    [PunRPC]
+    void UpdateCapGrabbable(bool newState)
+    {
+        this.toothpasteCap.isGrabbable = newState;
+    }
+
+    [PunRPC]
+    void NetworkedCapGrabbed()
+    {
         // This is a victory checkpoint!
-		TaskListScript.instance.CompleteTask(0);
+        TaskListScript.instance.CompleteTask(0);
 
         // Tell the toothpaste script that the cap is off and its free to be used!
         this.isUsable = true;
@@ -68,11 +80,5 @@ public class InteractableToothpasteScript : VRTK_InteractableObject
 
         // Also make the cap rigidbody non-kinematic...
         toothpasteCap.gameObject.AddComponent<Rigidbody>();
-    }
-
-    [PunRPC]
-    void UpdateCapGrabbable(bool newState)
-    {
-        this.toothpasteCap.isGrabbable = newState;
     }
 }

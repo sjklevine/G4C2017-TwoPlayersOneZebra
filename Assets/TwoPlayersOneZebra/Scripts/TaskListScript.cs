@@ -9,9 +9,11 @@ public class TaskListScript : MonoBehaviour {
     public TextMeshProUGUI task2;
     public TextMeshProUGUI task3;
     private AudioSource cachedAudioSource;
+    private PhotonView photonView;
 
     void Start () {
         cachedAudioSource = this.GetComponent<AudioSource>();
+        photonView = this.GetComponent<PhotonView>();
 		instance = this;
 	}
 
@@ -24,6 +26,13 @@ public class TaskListScript : MonoBehaviour {
     }
 
 	public void CompleteTask(int whichTask)
+    {
+        this.photonView.RPC("UpdateTaskList", PhotonTargets.AllViaServer, whichTask);
+    }
+
+
+    [PunRPC]
+    void UpdateTaskList(int whichTask)
     {
         // Only update if the task hasn't been already done!
         // Update the task list!
