@@ -37,5 +37,7 @@ public class PlayerManager : Photon.PunBehaviour {
         var trans = spawns[idx].transform;
         var player = PhotonNetwork.Instantiate(playerAvatar.name, trans.position, trans.rotation, 0);
         player.name = "Player " + (idx + 1);
+		PlayerAvatarPerPlayer playerAvatarPerPlayer = player.GetComponent<PlayerAvatarPerPlayer> ();
+		playerAvatarPerPlayer.SetPlayerNumber (idx);
     }
 }
