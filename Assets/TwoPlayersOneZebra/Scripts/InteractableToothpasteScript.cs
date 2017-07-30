@@ -7,6 +7,7 @@ public class InteractableToothpasteScript : VRTK_InteractableObject
 {
     public VRTK_InteractableObject toothpasteCap;
 	public ParticleSystem toothpasteParticles;
+    public TaskListScript taskList;
 
     void Start()
     {
@@ -52,6 +53,9 @@ public class InteractableToothpasteScript : VRTK_InteractableObject
 
     private void HandleGrabCap(object sender, InteractableObjectEventArgs e)
     {
+        // This is a victory checkpoint!
+        taskList.CompleteTask(1);
+
         // Tell the toothpaste script that the cap is off and its free to be used!
         this.isUsable = true;
 
