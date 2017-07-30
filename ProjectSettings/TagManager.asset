@@ -11,6 +11,7 @@ TagManager:
   - ExcludeTeleport
   - Toothbrush
   - Teeth
+  - Tube
   layers:
   - Default
   - TransparentFX

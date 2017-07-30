@@ -65,7 +65,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1573118316570286
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,6 +140,7 @@ GameObject:
   - component: {fileID: 4138622347226778}
   - component: {fileID: 65019236553986736}
   - component: {fileID: 114655491966772748}
+  - component: {fileID: 114222866350490294}
   m_Layer: 0
   m_Name: ToothpasteZone
   m_TagString: Teeth
@@ -468,7 +469,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1760547358714942}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -485,6 +486,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.044546634, y: 0.3220349, z: 0.056206644}
   m_Center: {x: 0.00000086426735, y: -0.12157507, z: 0.014702264}
+--- !u!114 &114222866350490294
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1760547358714942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74de6907a26ffb04886a513b71fc6c53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foam: {fileID: 198559177280446184}
 --- !u!114 &114455890444616168
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -549,6 +562,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toothpaste: {fileID: 1466264668518764}
+  cap: {fileID: 0}
 --- !u!114 &114759598489893280
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -575,11 +589,11 @@ ParticleSystem:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1573118316570286}
   serializedVersion: 5
-  lengthInSec: 1
+  lengthInSec: 0.1
   simulationSpeed: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   autoRandomSeed: 1
   startDelay:
     serializedVersion: 2
