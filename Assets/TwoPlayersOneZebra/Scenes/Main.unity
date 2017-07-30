@@ -952,6 +952,11 @@ Prefab:
       propertyPath: m_fontStyle
       value: 22
       objectReference: {fileID: 0}
+    - target: {fileID: 82122847155072324, guid: fa383a5fd82a49849b082ec8b98fc143,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0b8daec982620fb41ba619b4d02bc706, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fa383a5fd82a49849b082ec8b98fc143, type: 2}
   m_IsPrefabParent: 0
@@ -8409,7 +8414,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1254070748
 Transform:
   m_ObjectHideFlags: 0
