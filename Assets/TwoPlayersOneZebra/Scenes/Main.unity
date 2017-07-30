@@ -2195,7 +2195,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -3422,16 +3422,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 1972292100268164, guid: beeb7a239589fb04fbbddb10eebba956, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114535897249176398, guid: beeb7a239589fb04fbbddb10eebba956,
+    - target: {fileID: 114567529316616466, guid: beeb7a239589fb04fbbddb10eebba956,
         type: 2}
       propertyPath: wetToothbrushParticles
       value: 
       objectReference: {fileID: 1322668395}
-    - target: {fileID: 114601892499878600, guid: beeb7a239589fb04fbbddb10eebba956,
+    - target: {fileID: 114864040034111562, guid: beeb7a239589fb04fbbddb10eebba956,
         type: 2}
       propertyPath: wetToothbrushParticles
       value: 
@@ -6369,7 +6365,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1396155991360138, guid: b25781c5d02888942ab3eadb32bea3bc, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b25781c5d02888942ab3eadb32bea3bc, type: 2}

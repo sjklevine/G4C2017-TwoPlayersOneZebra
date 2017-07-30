@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33006655083919598}
   - component: {fileID: 65291374115587282}
   - component: {fileID: 23589013560989064}
-  m_Layer: 0
+  - component: {fileID: 114567529316616466}
+  m_Layer: 18
   m_Name: faucet_right_water_collider
-  m_TagString: Untagged
+  m_TagString: Water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39,7 +40,6 @@ GameObject:
   - component: {fileID: 4034769836446742}
   - component: {fileID: 198463060128180968}
   - component: {fileID: 199189747984040582}
-  - component: {fileID: 114601892499878600}
   m_Layer: 18
   m_Name: FaucetWater
   m_TagString: Water
@@ -179,9 +179,10 @@ GameObject:
   - component: {fileID: 33084945211942084}
   - component: {fileID: 65828677445846104}
   - component: {fileID: 23699789533773866}
-  m_Layer: 0
+  - component: {fileID: 114864040034111562}
+  m_Layer: 18
   m_Name: faucet_left_water_collider
-  m_TagString: Untagged
+  m_TagString: Water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -230,7 +231,6 @@ GameObject:
   - component: {fileID: 4435161720574368}
   - component: {fileID: 198777513874690368}
   - component: {fileID: 199768026872901462}
-  - component: {fileID: 114535897249176398}
   m_Layer: 18
   m_Name: FaucetWater
   m_TagString: Water
@@ -816,7 +816,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1288285130220990}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 9000000, guid: 490867e213601f64987d637c9f7cbbc6, type: 3}
   m_Controller: {fileID: 9100000, guid: 7ee49726ea0bdb441bf8156d5bc990db, type: 2}
   m_CullingMode: 0
@@ -833,7 +833,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1673471789781902}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 9000000, guid: 490867e213601f64987d637c9f7cbbc6, type: 3}
   m_Controller: {fileID: 9100000, guid: bc29c75484b361c43ac11f8b4704aa43, type: 2}
   m_CullingMode: 0
@@ -857,24 +857,24 @@ MonoBehaviour:
   actualWater: {fileID: 1972292100268164}
   faucetGO: {fileID: 1288285130220990}
   faucetAnimator: {fileID: 95020461108520264}
---- !u!114 &114535897249176398
+--- !u!114 &114567529316616466
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1972292100268164}
+  m_GameObject: {fileID: 1007693374108442}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fffa99f6ddd84be43be9be2d739ff58c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   wetToothbrushParticles: {fileID: 0}
---- !u!114 &114601892499878600
+--- !u!114 &114864040034111562
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1134708214143608}
+  m_GameObject: {fileID: 1771575154214806}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fffa99f6ddd84be43be9be2d739ff58c, type: 3}
