@@ -5641,7 +5641,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startImmediately: 0
-  thingToTeleport: {fileID: 1653918992}
   bedStartPositionTransform: {fileID: 1169853429}
   mirrorStartPositionTransform: {fileID: 1332436676}
   alarmSfx: {fileID: 897409318}

@@ -7,15 +7,17 @@ public class ZebraAnimationSequence : MonoBehaviour
 {
     public bool startImmediately;
 
-    public Transform thingToTeleport;
     public Transform bedStartPositionTransform;
     public Transform mirrorStartPositionTransform;
     public AudioSource alarmSfx;
     public VRTK_HeadsetFade fadeScript;
 
+    private Transform thingToTeleport;
+
     void Start()
     {
-        if (startImmediately) { 
+        thingToTeleport = VRTK.VRTK_DeviceFinder.PlayAreaTransform();
+        if (startImmediately) {
             StartCoroutine(DoIntroSequence());
         }
     }
