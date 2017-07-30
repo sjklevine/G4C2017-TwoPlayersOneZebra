@@ -15,6 +15,7 @@ TagManager:
   - Holsterable
   - PanoramaSource
   - Water
+  - Hand
   layers:
   - Default
   - TransparentFX
