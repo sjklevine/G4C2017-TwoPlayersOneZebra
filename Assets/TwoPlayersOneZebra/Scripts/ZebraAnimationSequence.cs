@@ -26,9 +26,13 @@ public class ZebraAnimationSequence : MonoBehaviour
         // Dev key commands...
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            photonView.RPC("StartNetworkedIntroSequence", PhotonTargets.AllViaServer);
+			StartTheIntro ();
         }
     }
+
+	public void StartTheIntro() {
+		photonView.RPC("StartNetworkedIntroSequence", PhotonTargets.AllViaServer);
+	}
 
 	IEnumerator WaitUntilHavePlayArea()
 	{

@@ -24,11 +24,11 @@ GameObject:
   - component: {fileID: 23625365847052808}
   m_Layer: 0
   m_Name: model
-  m_TagString: Untagged
+  m_TagString: Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1026066097501662
 GameObject:
   m_ObjectHideFlags: 1
@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 54846416103089528}
   m_Layer: 0
   m_Name: attach
-  m_TagString: Untagged
+  m_TagString: Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -258,7 +258,7 @@ GameObject:
   - component: {fileID: 65924918006879498}
   m_Layer: 0
   m_Name: CubeModel
-  m_TagString: Untagged
+  m_TagString: Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -276,7 +276,7 @@ GameObject:
   - component: {fileID: 65590874307519970}
   m_Layer: 0
   m_Name: CubeModel
-  m_TagString: Untagged
+  m_TagString: Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -310,7 +310,7 @@ GameObject:
   - component: {fileID: 114038177950311500}
   m_Layer: 0
   m_Name: Right Hand
-  m_TagString: Untagged
+  m_TagString: Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -346,7 +346,7 @@ GameObject:
   - component: {fileID: 54688421700558002}
   m_Layer: 0
   m_Name: attach
-  m_TagString: Untagged
+  m_TagString: Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -587,7 +587,7 @@ GameObject:
   - component: {fileID: 114698908079983656}
   m_Layer: 0
   m_Name: Left Hand
-  m_TagString: Untagged
+  m_TagString: Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -738,7 +738,7 @@ GameObject:
   - component: {fileID: 23923750202023272}
   m_Layer: 0
   m_Name: model
-  m_TagString: Untagged
+  m_TagString: Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -886,7 +886,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1396155991360138}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.122701, y: 4.412077, z: 20.504063}
+  m_LocalPosition: {x: -5.264249, y: -1.008958, z: -10.632224}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4083235225380704}
@@ -3084,8 +3084,8 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1266566000291760}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
+  m_IsTrigger: 1
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -3096,8 +3096,8 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1207133069724046}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
+  m_IsTrigger: 1
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -3381,6 +3381,7 @@ MonoBehaviour:
   brushingNow: 0
   brushingTimeLeft: 5
   toothpasteBlob: {fileID: 0}
+  taskList: {fileID: 0}
 --- !u!114 &114359785504396256
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3545,6 +3546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftHand: {fileID: 1647167761276460}
   rightHand: {fileID: 1311027533318458}
+  head: {fileID: 1316983645817718}
 --- !u!114 &114958375509177494
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3603,7 +3605,7 @@ SphereCollider:
   m_GameObject: {fileID: 1022545251714502}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
