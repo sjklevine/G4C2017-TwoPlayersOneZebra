@@ -7,6 +7,7 @@ public class InteractableToothpasteScript : VRTK_InteractableObject
 {
     public VRTK_InteractableObject toothpasteCap;
 	public ParticleSystem toothpasteParticles;
+    private PhotonView photonView;
 
     void Start()
     {
@@ -14,6 +15,8 @@ public class InteractableToothpasteScript : VRTK_InteractableObject
         this.InteractableObjectGrabbed += HandleGrabToothpaste;
         this.InteractableObjectUngrabbed += HandleUngrabToothpaste;
         toothpasteCap.InteractableObjectGrabbed += HandleGrabCap;
+
+        this.photonView = this.GetComponent<PhotonView>();
     }
 
     public override void StartUsing(VRTK_InteractUse usingObject)
@@ -44,10 +47,12 @@ public class InteractableToothpasteScript : VRTK_InteractableObject
     {
         // ONLY allow the cap to be grabbable when this is grabbed!
         this.toothpasteCap.isGrabbable = true;
+        this.photonView.RPC("UpdateCapGrabbable", PhotonTargets.AllViaServer, true);
     }
     private void HandleUngrabToothpaste(object sender, InteractableObjectEventArgs e)
     {
         this.toothpasteCap.isGrabbable = false;
+        this.photonView.RPC("UpdateCapGrabbable", PhotonTargets.AllViaServer, false);
     }
 
     private void HandleGrabCap(object sender, InteractableObjectEventArgs e)
@@ -63,5 +68,11 @@ public class InteractableToothpasteScript : VRTK_InteractableObject
 
         // Also make the cap rigidbody non-kinematic...
         toothpasteCap.gameObject.AddComponent<Rigidbody>();
+    }
+
+    [PunRPC]
+    void UpdateCapGrabbable(bool newState)
+    {
+        this.toothpasteCap.isGrabbable = newState;
     }
 }
