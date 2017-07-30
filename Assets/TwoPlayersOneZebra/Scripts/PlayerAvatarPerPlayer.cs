@@ -18,9 +18,15 @@ public class PlayerAvatarPerPlayer : MonoBehaviour {
 			rightHand.SetActive (false);
 		}
 
-		PhotonView photonView = GetComponent<PhotonView> ();
-		if (!photonView.isMine) {
-			head.SetActive (false);
+	}
+
+	void Update() {
+		if (head.activeSelf) {
+			PhotonView photonView = GetComponent<PhotonView> ();
+			if (!photonView.isMine) {
+				head.SetActive (false);
+			}
 		}
 	}
+
 }
