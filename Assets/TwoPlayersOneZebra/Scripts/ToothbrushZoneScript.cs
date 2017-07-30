@@ -14,6 +14,7 @@ public class ToothbrushZoneScript : MonoBehaviour {
 	private float elapsedTime;
 	public float brushingTimeLeft = 5f;
 	public GameObject toothpasteBlob;
+    public TaskListScript taskList;
 
 	void Start(){
 		teethDirty.SetActive (true);
@@ -98,8 +99,9 @@ public class ToothbrushZoneScript : MonoBehaviour {
 			teethClean.SetActive (true);
 			teethAreSparklingClean = true;
 			
-		//Need sparkling SFX here
+		    // TODO: Need sparkling SFX here
 
-
+            // This is a victory checkpoint!
+            taskList.CompleteTask(2);
 		}
 	}
