@@ -970,7 +970,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1579228107227136}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.2}
+  m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 90, y: 90, z: 90}
   m_Children:
   - {fileID: 4260801193654384}
@@ -3075,8 +3075,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.3980103, z: 1}
-  m_Center: {x: 0, y: -0.16271882, z: 0}
+  m_Size: {x: 1.1289413, y: 1.3980104, z: 2.6816883}
+  m_Center: {x: -0.0105511695, y: -0.16271885, z: 0.8408447}
 --- !u!65 &65590874307519970
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -3421,8 +3421,8 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 114359785504396256}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 0
-  instantiationId: -1
+  viewIdField: 5
+  instantiationId: 5
   currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!114 &114578242593311320
@@ -3447,8 +3447,8 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 114698908079983656}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 0
-  instantiationId: -1
+  viewIdField: 4
+  instantiationId: 4
   currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!114 &114628915782370294
@@ -3473,8 +3473,8 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 114008885173194800}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 0
-  instantiationId: -1
+  viewIdField: 3
+  instantiationId: 3
   currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!114 &114698908079983656
@@ -3517,8 +3517,8 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 0}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 0
-  instantiationId: -1
+  viewIdField: 2
+  instantiationId: 2
   currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!114 &114790659180223726
@@ -3567,8 +3567,8 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 114038177950311500}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 0
-  instantiationId: -1
+  viewIdField: 1
+  instantiationId: 1
   currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!135 &135175479994911956
