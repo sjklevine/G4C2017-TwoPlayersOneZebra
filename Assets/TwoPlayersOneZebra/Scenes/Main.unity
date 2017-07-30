@@ -1000,6 +1000,10 @@ Prefab:
       propertyPath: gameObjectToFollow
       value: 
       objectReference: {fileID: 1787706961}
+    - target: {fileID: 1204251014150210, guid: e22c67e59f0f68f4b9560930a37d8dc4, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e22c67e59f0f68f4b9560930a37d8dc4, type: 2}
   m_IsPrefabParent: 0
@@ -5873,67 +5877,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e53b07ad62d980a4da9fffff0b05fd2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &1026548502
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 2101218923}
-    m_Modifications:
-    - target: {fileID: 4186149571120834, guid: a742dd6bdeb3f3944b1fb1924fadf781, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0.6190009
-      objectReference: {fileID: 0}
-    - target: {fileID: 4186149571120834, guid: a742dd6bdeb3f3944b1fb1924fadf781, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.395
-      objectReference: {fileID: 0}
-    - target: {fileID: 4186149571120834, guid: a742dd6bdeb3f3944b1fb1924fadf781, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0.5869995
-      objectReference: {fileID: 0}
-    - target: {fileID: 4186149571120834, guid: a742dd6bdeb3f3944b1fb1924fadf781, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0.2471815
-      objectReference: {fileID: 0}
-    - target: {fileID: 4186149571120834, guid: a742dd6bdeb3f3944b1fb1924fadf781, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0.66249627
-      objectReference: {fileID: 0}
-    - target: {fileID: 4186149571120834, guid: a742dd6bdeb3f3944b1fb1924fadf781, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.66249627
-      objectReference: {fileID: 0}
-    - target: {fileID: 4186149571120834, guid: a742dd6bdeb3f3944b1fb1924fadf781, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.2471815
-      objectReference: {fileID: 0}
-    - target: {fileID: 4186149571120834, guid: a742dd6bdeb3f3944b1fb1924fadf781, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1851755661262086, guid: a742dd6bdeb3f3944b1fb1924fadf781, type: 2}
-      propertyPath: m_Name
-      value: Toothpaste_Tube
-      objectReference: {fileID: 0}
-    - target: {fileID: 114418925844102290, guid: a742dd6bdeb3f3944b1fb1924fadf781,
-        type: 2}
-      propertyPath: toothpasteCap
-      value: 
-      objectReference: {fileID: 1681361074}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: a742dd6bdeb3f3944b1fb1924fadf781, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1026548504 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1851755661262086, guid: a742dd6bdeb3f3944b1fb1924fadf781,
     type: 2}
-  m_PrefabInternal: {fileID: 1026548502}
+  m_PrefabInternal: {fileID: 1403006928}
 --- !u!114 &1026548510 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114418925844102290, guid: a742dd6bdeb3f3944b1fb1924fadf781,
     type: 2}
-  m_PrefabInternal: {fileID: 1026548502}
+  m_PrefabInternal: {fileID: 1403006928}
   m_Script: {fileID: 11500000, guid: 4ddb0e381d76cdd4386cc09cac86879b, type: 3}
 --- !u!1 &1033838172 stripped
 GameObject:
@@ -7521,6 +7474,57 @@ MonoBehaviour:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ebb8f40b5e005cc4da5979b2eb1f61b6, type: 2}
   m_PrefabInternal: {fileID: 968384279}
+--- !u!1001 &1403006928
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2101218923}
+    m_Modifications:
+    - target: {fileID: 4186149571120834, guid: a742dd6bdeb3f3944b1fb1924fadf781, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.6190009
+      objectReference: {fileID: 0}
+    - target: {fileID: 4186149571120834, guid: a742dd6bdeb3f3944b1fb1924fadf781, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.395
+      objectReference: {fileID: 0}
+    - target: {fileID: 4186149571120834, guid: a742dd6bdeb3f3944b1fb1924fadf781, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.5869995
+      objectReference: {fileID: 0}
+    - target: {fileID: 4186149571120834, guid: a742dd6bdeb3f3944b1fb1924fadf781, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.2471815
+      objectReference: {fileID: 0}
+    - target: {fileID: 4186149571120834, guid: a742dd6bdeb3f3944b1fb1924fadf781, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.66249627
+      objectReference: {fileID: 0}
+    - target: {fileID: 4186149571120834, guid: a742dd6bdeb3f3944b1fb1924fadf781, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0.66249627
+      objectReference: {fileID: 0}
+    - target: {fileID: 4186149571120834, guid: a742dd6bdeb3f3944b1fb1924fadf781, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.2471815
+      objectReference: {fileID: 0}
+    - target: {fileID: 4186149571120834, guid: a742dd6bdeb3f3944b1fb1924fadf781, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851755661262086, guid: a742dd6bdeb3f3944b1fb1924fadf781, type: 2}
+      propertyPath: m_Name
+      value: Toothpaste_Tube
+      objectReference: {fileID: 0}
+    - target: {fileID: 114418925844102290, guid: a742dd6bdeb3f3944b1fb1924fadf781,
+        type: 2}
+      propertyPath: toothpasteCap
+      value: 
+      objectReference: {fileID: 1681361074}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a742dd6bdeb3f3944b1fb1924fadf781, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1413809960
 GameObject:
   m_ObjectHideFlags: 0
@@ -9309,7 +9313,7 @@ MonoBehaviour:
 GameObject:
   m_PrefabParentObject: {fileID: 1712909556220298, guid: a742dd6bdeb3f3944b1fb1924fadf781,
     type: 2}
-  m_PrefabInternal: {fileID: 1026548502}
+  m_PrefabInternal: {fileID: 1403006928}
 --- !u!4 &1803423818 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: d0468f39a89a0344c86b66986830a649, type: 2}
