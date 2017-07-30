@@ -12,6 +12,8 @@ TagManager:
   - Toothbrush
   - Teeth
   - Tube
+  - Holsterable
+  - PanoramaSource
   layers:
   - Default
   - TransparentFX
@@ -22,14 +24,14 @@ TagManager:
   - 
   - 
   - GazeOnly
-  - MazeWalls
-  - MazeTurret
-  - MazeTurretBullet
-  - Bg
-  - FPSWeapon
+  - 
+  - 
+  - 
+  - 
+  - 
   - StereoRender_Ignore
-  - Kitten
-  - DestinationPoints
+  - 
+  - 
   - Cap
   - Toothpaste
   - 

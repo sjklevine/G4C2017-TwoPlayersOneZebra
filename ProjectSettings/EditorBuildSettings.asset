@@ -6,5 +6,5 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/TwoPlayersOneZebra/Scenes/Title.unity
-    guid: 45e0fd8c2189d7246bbedfbe728f6dfb
+    path: Assets/TwoPlayersOneZebra/Scenes/Main.unity
+    guid: 89fdfb471681f0a43b234391bf48c2f4
