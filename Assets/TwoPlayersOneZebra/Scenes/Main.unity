@@ -1413,24 +1413,8 @@ Prefab:
       value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 704c83bee4e960b4b842f55e9513afa8, type: 2}
-      propertyPath: m_RootMapOrder
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 704c83bee4e960b4b842f55e9513afa8, type: 2}
       propertyPath: m_RootOrder
       value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 704c83bee4e960b4b842f55e9513afa8, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 704c83bee4e960b4b842f55e9513afa8, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 704c83bee4e960b4b842f55e9513afa8, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114621675352659306, guid: 704c83bee4e960b4b842f55e9513afa8,
         type: 2}
@@ -2211,7 +2195,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -3317,63 +3301,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 528989153}
   m_Mesh: {fileID: 4300000, guid: bba604e1f5e43cd47a55fbf130bf1709, type: 3}
---- !u!1 &540543679 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100000, guid: 9728a2053897b184da51681917ba4f74, type: 2}
-  m_PrefabInternal: {fileID: 1155232634}
---- !u!114 &540543680
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 540543679}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18055ba762aa3994f9c10208cd088bc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &540543681
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 540543679}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3abaf4521bf2344ea21ed3020b98eb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  disableWhenIdle: 1
-  touchHighlightColor: {r: 1, g: 0.8901961, b: 0, a: 0}
-  allowedTouchControllers: 0
-  ignoredColliders: []
-  isGrabbable: 0
-  holdButtonToGrab: 1
-  stayGrabbedOnTeleport: 1
-  validDrop: 1
-  grabOverrideButton: 0
-  allowedGrabControllers: 0
-  grabAttachMechanicScript: {fileID: 0}
-  secondaryGrabActionScript: {fileID: 540543680}
-  isUsable: 0
-  holdButtonToUse: 1
-  useOnlyIfGrabbed: 0
-  pointerActivatesUseAction: 0
-  useOverrideButton: 0
-  allowedUseControllers: 0
-  usingState: 0
---- !u!65 &540543682
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 540543679}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.20609389, y: 0.05795908, z: 0.1661187}
-  m_Center: {x: 0.00000044703484, y: 0.02897948, z: -0.0000011920929}
 --- !u!4 &558878369 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ed721f45a1eb666429bd907bcf4b1fd8, type: 2}
@@ -3493,7 +3420,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4707036530859576, guid: beeb7a239589fb04fbbddb10eebba956, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114601892499878600, guid: beeb7a239589fb04fbbddb10eebba956,
         type: 2}
@@ -6278,63 +6205,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1851755661262086, guid: a742dd6bdeb3f3944b1fb1924fadf781,
     type: 2}
   m_PrefabInternal: {fileID: 1403006928}
---- !u!1 &1033838172 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100000, guid: 704c83bee4e960b4b842f55e9513afa8, type: 2}
-  m_PrefabInternal: {fileID: 251074219}
---- !u!114 &1033838173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1033838172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3abaf4521bf2344ea21ed3020b98eb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  disableWhenIdle: 1
-  touchHighlightColor: {r: 1, g: 0.8901961, b: 0, a: 0}
-  allowedTouchControllers: 0
-  ignoredColliders: []
-  isGrabbable: 1
-  holdButtonToGrab: 1
-  stayGrabbedOnTeleport: 1
-  validDrop: 1
-  grabOverrideButton: 0
-  allowedGrabControllers: 0
-  grabAttachMechanicScript: {fileID: 0}
-  secondaryGrabActionScript: {fileID: 1033838175}
-  isUsable: 0
-  holdButtonToUse: 1
-  useOnlyIfGrabbed: 0
-  pointerActivatesUseAction: 0
-  useOverrideButton: 0
-  allowedUseControllers: 0
-  usingState: 0
---- !u!65 &1033838174
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1033838172}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.11963066, y: 0.31578577, z: 0.15128933}
-  m_Center: {x: 0.0000011902301, y: 0.15789282, z: -0.001889707}
---- !u!114 &1033838175
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1033838172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18055ba762aa3994f9c10208cd088bc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1034227319
 GameObject:
   m_ObjectHideFlags: 0
@@ -6794,24 +6664,8 @@ Prefab:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9728a2053897b184da51681917ba4f74, type: 2}
-      propertyPath: m_RootMapOrder
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 9728a2053897b184da51681917ba4f74, type: 2}
       propertyPath: m_RootOrder
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 9728a2053897b184da51681917ba4f74, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 9728a2053897b184da51681917ba4f74, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 9728a2053897b184da51681917ba4f74, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114409677956107422, guid: 9728a2053897b184da51681917ba4f74,
         type: 2}
@@ -7887,20 +7741,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 1851755661262086, guid: a742dd6bdeb3f3944b1fb1924fadf781, type: 2}
-      propertyPath: m_Name
-      value: Toothpaste_Tube
-      objectReference: {fileID: 0}
     - target: {fileID: 114418925844102290, guid: a742dd6bdeb3f3944b1fb1924fadf781,
         type: 2}
       propertyPath: toothpasteCap
       value: 
       objectReference: {fileID: 34275392}
-    - target: {fileID: 114418925844102290, guid: a742dd6bdeb3f3944b1fb1924fadf781,
-        type: 2}
-      propertyPath: taskList
-      value: 
-      objectReference: {fileID: 1814237121}
+    - target: {fileID: 1851755661262086, guid: a742dd6bdeb3f3944b1fb1924fadf781, type: 2}
+      propertyPath: m_Name
+      value: Toothpaste_Tube
+      objectReference: {fileID: 0}
     - target: {fileID: 114557166568601794, guid: a742dd6bdeb3f3944b1fb1924fadf781,
         type: 2}
       propertyPath: viewIdField
@@ -9935,12 +9784,6 @@ Transform:
   m_Father: {fileID: 1254070748}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &1814237121 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114428564742137506, guid: fa383a5fd82a49849b082ec8b98fc143,
-    type: 2}
-  m_PrefabInternal: {fileID: 118738270}
-  m_Script: {fileID: 11500000, guid: e9cfb414f4807e3499903d0ed7d6479f, type: 3}
 --- !u!1 &1817850594
 GameObject:
   m_ObjectHideFlags: 0
