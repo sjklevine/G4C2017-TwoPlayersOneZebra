@@ -13,7 +13,7 @@ public class ToothbrushZoneScript : MonoBehaviour {
 	private bool teethAreSparklingClean;
 	private float elapsedTime;
 	public float brushingTimeLeft = 5f;
-	public GameObject toothpasteBlob;
+	//public GameObject toothpasteBlob;
 
 	void Start(){
 		teethDirty.SetActive (true);
@@ -79,6 +79,7 @@ public class ToothbrushZoneScript : MonoBehaviour {
 			if(teethAreSparklingClean){
 				brushingTimeLeft = 5f;
 				Debug.Log ("sending message");
+				GameObject toothpasteBlob = GameObject.FindGameObjectWithTag ("Teeth");
 				toothpasteBlob.SendMessage ("HideToothpasteGlob");
 				toothPasteApplied = false;
 			}
