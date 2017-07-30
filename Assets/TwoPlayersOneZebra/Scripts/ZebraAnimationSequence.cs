@@ -16,10 +16,7 @@ public class ZebraAnimationSequence : MonoBehaviour
 
     void Start()
     {
-        thingToTeleport = VRTK.VRTK_DeviceFinder.PlayAreaTransform();
-        if (startImmediately) {
-            StartCoroutine(DoIntroSequence());
-        }
+		StartCoroutine (WaitUntilHavePlayArea ());
     }
 
     void Update()
@@ -34,6 +31,17 @@ public class ZebraAnimationSequence : MonoBehaviour
             StartCoroutine(DoJumpToMirror());
         }
     }
+
+	IEnumerator WaitUntilHavePlayArea()
+	{
+		while (thingToTeleport == null) {
+			thingToTeleport = VRTK.VRTK_DeviceFinder.PlayAreaTransform();
+			yield return new WaitForSeconds (0.1f);
+		}
+		if (startImmediately) {
+			StartCoroutine(DoIntroSequence());
+		}
+	}
 
     IEnumerator DoIntroSequence()
     {
