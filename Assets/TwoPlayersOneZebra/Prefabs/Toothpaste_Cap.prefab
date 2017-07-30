@@ -21,11 +21,11 @@ GameObject:
   - component: {fileID: 4060785889820884}
   - component: {fileID: 33329699774468770}
   - component: {fileID: 23155922204704452}
+  - component: {fileID: 65314873024690500}
   - component: {fileID: 114746728439893996}
   - component: {fileID: 114137077478307288}
-  - component: {fileID: 114480513612408448}
+  - component: {fileID: 114368792405120790}
   - component: {fileID: 114779522973890370}
-  - component: {fileID: 65314873024690500}
   m_Layer: 17
   m_Name: Toothpaste_Cap
   m_TagString: Untagged
@@ -112,13 +112,13 @@ MonoBehaviour:
   touchHighlightColor: {r: 1, g: 0.8901961, b: 0, a: 0}
   allowedTouchControllers: 0
   ignoredColliders: []
-  isGrabbable: 1
+  isGrabbable: 0
   holdButtonToGrab: 1
   stayGrabbedOnTeleport: 1
   validDrop: 1
   grabOverrideButton: 0
   allowedGrabControllers: 0
-  grabAttachMechanicScript: {fileID: 114480513612408448}
+  grabAttachMechanicScript: {fileID: 114368792405120790}
   secondaryGrabActionScript: {fileID: 114779522973890370}
   isUsable: 0
   holdButtonToUse: 1
@@ -127,7 +127,7 @@ MonoBehaviour:
   useOverrideButton: 0
   allowedUseControllers: 0
   usingState: 0
---- !u!114 &114480513612408448
+--- !u!114 &114368792405120790
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1204251014150210}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6327d36c435e4c046b783a31ff1c5b08, type: 3}
+  m_Script: {fileID: 11500000, guid: 8afa0b205791c9f4496bf2814aeac078, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   precisionGrab: 0
@@ -146,7 +146,6 @@ MonoBehaviour:
   onGrabCollisionDelay: 0
   destroyImmediatelyOnThrow: 1
   breakForce: 1500
-  toothpasteScript: {fileID: 0}
 --- !u!114 &114746728439893996
 MonoBehaviour:
   m_ObjectHideFlags: 1

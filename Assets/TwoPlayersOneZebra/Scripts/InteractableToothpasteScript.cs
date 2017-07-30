@@ -5,21 +5,15 @@ using VRTK;
 
 public class InteractableToothpasteScript : VRTK_InteractableObject
 {
-    public Transform toothpasteCap;
+    public VRTK_InteractableObject toothpasteCap;
 	public ParticleSystem toothpasteParticles;
-
-    //private bool hasFired;
-    //private bool hasBeenTouched;
 
     void Start()
     {
-        //Debug.Log("REPARENTING THE CAP");
-        //toothpasteCap.transform.SetParent(this.transform.parent,false); //Re-parent this puppy, it'll be fine
-    }
-
-    public void OnCapGrabbed()
-    {
-        this.isUsable = true;
+        // Mixing some VRTK methods here but this seems cleaner than writing a brand new GrabAttach script for the toothpaste.
+        this.InteractableObjectGrabbed += HandleGrabToothpaste;
+        this.InteractableObjectUngrabbed += HandleUngrabToothpaste;
+        toothpasteCap.InteractableObjectGrabbed += HandleGrabCap;
     }
 
     public override void StartUsing(VRTK_InteractUse usingObject)
@@ -32,6 +26,10 @@ public class InteractableToothpasteScript : VRTK_InteractableObject
 		base.StopUsing(usingObject);
 		StopSqueezeToothpaste();
 	}
+
+    // ----- Privates ! ----- //
+
+    // "Use" methods for tube
     private void SqueezeToothpaste()
     {
 		toothpasteParticles.Play ();
@@ -40,21 +38,27 @@ public class InteractableToothpasteScript : VRTK_InteractableObject
 	{
 		toothpasteParticles.Stop ();
 	}
-    /*
-    public void OnSecondaryGrab()
+
+    // "Grab/ungrab" callbacks for tube and cap
+    private void HandleGrabToothpaste(object sender, InteractableObjectEventArgs e)
     {
-        Debug.Log("TOOTHPASTE GOT TOUCHED");
-        hasBeenTouched = true;
+        // ONLY allow the cap to be grabbable when this is grabbed!
+        this.toothpasteCap.isGrabbable = true;
+    }
+    private void HandleUngrabToothpaste(object sender, InteractableObjectEventArgs e)
+    {
+        this.toothpasteCap.isGrabbable = false;
     }
 
-    protected override void Update() 
+    private void HandleGrabCap(object sender, InteractableObjectEventArgs e)
     {
-        if (!hasFired && hasBeenTouched) { 
-            Debug.Log("I'M GETTING GRABBED BY HAND 2");
-            Debug.Log("GRABBING OBJECT = " + GetGrabbingObject().name);
-            Debug.Log("2nd GRABBING OBJECT = " + GetSecondaryGrabbingObject().name);
-            hasFired = true;
-        }
+        // Tell the toothpaste script that the cap is off and its free to be used!
+        this.isUsable = true;
+
+        // And nuke our follow script.
+        Destroy(toothpasteCap.GetComponent<VRTK_TransformFollow>());
+
+        // Also make the cap rigidbody non-kinematic...
+        toothpasteCap.gameObject.AddComponent<Rigidbody>();
     }
-    */
 }
