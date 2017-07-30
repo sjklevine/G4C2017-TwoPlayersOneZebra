@@ -78,6 +78,7 @@ public class ToothbrushZoneScript : MonoBehaviour {
 			}
 			if(teethAreSparklingClean){
 				brushingTimeLeft = 5f;
+				Debug.Log ("sending message");
 				toothpasteBlob.SendMessage ("HideToothpasteGlob");
 				toothPasteApplied = false;
 			}
