@@ -15,6 +15,7 @@ public class FaucetColliderScript : MonoBehaviour {
     {
         if (other.gameObject.tag.Equals("Hand"))
         {
+			Debug.Log("GOT HAND");
 			faucetAnimator.SetTrigger ("TurnOn");
 			actualWater.SetActive(true);
         }

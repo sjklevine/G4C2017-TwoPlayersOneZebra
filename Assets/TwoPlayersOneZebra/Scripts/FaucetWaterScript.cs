@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FaucetWaterScript : MonoBehaviour {
-    public TaskListScript taskList;
 	public ParticleSystem wetToothbrushParticles;
 
     void OnTriggerEnter(Collider other)
@@ -12,7 +11,7 @@ public class FaucetWaterScript : MonoBehaviour {
         {
             Debug.Log("TOOTHBRUSH IN WATER");
 			wetToothbrushParticles.Play ();
-            taskList.CompleteTask(0);
+			TaskListScript.instance.CompleteTask(1);
         }
     }
 }
